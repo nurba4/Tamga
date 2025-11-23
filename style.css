@@ -1,0 +1,109 @@
+/* Сброс */
+* {margin:0; padding:0; box-sizing:border-box;}
+body, html {font-family:'Arial', sans-serif; scroll-behavior:smooth;}
+
+/* Живой градиент */
+body {
+  background: linear-gradient(-45deg, #6a0dad, #ff4500, #ffdd00, #00aaff);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  color: #fff;
+}
+
+/* Canvas для частиц */
+#particles {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero h1 {font-size:3rem; margin-bottom:1rem;}
+.hero p {margin-bottom:1rem; font-size:1.2rem;}
+
+.btn {
+  display:inline-block;
+  padding:0.8rem 2rem;
+  background: rgba(255,255,255,0.9);
+  color:#111;
+  font-weight:bold;
+  border-radius:50px;
+  text-decoration:none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,1);
+}
+
+/* Секции */
+.section {
+  padding:80px 20px;
+  max-width:1000px;
+  margin:0 auto 40px;
+  background: rgba(0,0,0,0.3);
+  border-radius:20px;
+  backdrop-filter: blur(5px);
+  opacity:0;
+  transform:translateY(20px);
+}
+
+/* Заголовки */
+.section h2 {text-align:center; font-size:2.2rem; margin-bottom:1rem;}
+.section p, .section ul {line-height:1.6; margin-bottom:1rem;}
+ul {list-style-type: disc; padding-left:20px;}
+
+/* Карточки */
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  width:250px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Контакты */
+.contacts a {color:#ffdd00; text-decoration:none;}
+.contacts a:hover{text-decoration:underline;}
+
+/* Футер */
+footer {
+  text-align:center;
+  padding:20px;
+  font-size:0.9rem;
+}
+
+/* Анимации секций */
+@keyframes fadeIn {
+  to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
